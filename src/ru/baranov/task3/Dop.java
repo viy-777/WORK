@@ -1,5 +1,6 @@
 package ru.baranov.task3;
 
+import javax.swing.*;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -18,29 +19,42 @@ public class Dop {
         num = in.nextInt();
 
         boolean gameover = true;
+        int dif1 = 0, dif2 = 100, count = 0;
+        String fact;
 
         while (gameover == true) {
-            int dif = Math.abs((i - num));
-            System.out.println("Теущая разница:" + dif);
-            if (num == 0) {                               //принудительное завершение цикла
+             if (num == 0) {                               //принудительное завершение цикла
                 gameover = false;
                 break;
             } else if (num == i) {                         //условие правильного ввода числа
                 System.out.println("Вы угадали число!");
                 gameover = false;
                 break;
-            } else {
-                //if (dif <= 10) {
-                    System.out.println("Горячо! Введите число от 0 до 100 (для выхода введите '0'):");
-                    num = in.nextInt();
-                    //int dif_tek = Math.abs((i - num));
+            } else {                                       //если введено неверное число
+                if (count == 0) {                          //первая проверка неверного числа
+                    dif1 = Math.abs((i - num));
 
-                //}
-                //if (dif > 10) {
-                //    System.out.println("Холодно! Введите число от 0 до 100 (для выхода введите '0'):");
-                //    num = in.nextInt();
-                //}
+                    {if (dif1 < dif2) {fact = "Горячо!";}
+                    else {fact = "Холодно!";}}
+
+                    System.out.println(fact + " Введите число от 0 до 100 (для выхода введите '0'):");
+                    num = in.nextInt();
+
+                    count = 1;
+                }
+                else     {                                  //вторая проверка неверного числа
+                    dif2 = Math.abs((i - num));
+
+                    {if (dif2 < dif1) {fact = "Горячо!";}
+                    else {fact = "Холодно!";}}
+
+                    System.out.println(fact + " Введите число от 0 до 100 (для выхода введите '0'):");
+                        num = in.nextInt();
+
+                    count = 0;
+                    }
+
             }
-        }
+    }
     }
 }
