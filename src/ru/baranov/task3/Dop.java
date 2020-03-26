@@ -21,6 +21,7 @@ public class Dop {
 
         while (gameover == true) {
             int dif = Math.abs((i - num));
+            System.out.println("Теущая разница:" + dif);
             if (num == 0) {                               //принудительное завершение цикла
                 gameover = false;
                 break;
@@ -29,14 +30,16 @@ public class Dop {
                 gameover = false;
                 break;
             } else {
-                if (dif <= 10) {
-                    System.out.println("Горячо! Введите число от 0 до 100 (для выхода введите '0'):"); //условие ввода числа, близкого к загаданному
+                //if (dif <= 10) {
+                    System.out.println("Горячо! Введите число от 0 до 100 (для выхода введите '0'):");
                     num = in.nextInt();
-                }
-                if (dif > 10) {
-                    System.out.println("Холодно! Введите число от 0 до 100 (для выхода введите '0'):"); //условие ввода числа, близкого к загаданном
-                    num = in.nextInt();
-                }
+                    //int dif_tek = Math.abs((i - num));
+
+                //}
+                //if (dif > 10) {
+                //    System.out.println("Холодно! Введите число от 0 до 100 (для выхода введите '0'):");
+                //    num = in.nextInt();
+                //}
             }
         }
     }
