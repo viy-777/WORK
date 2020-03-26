@@ -32,7 +32,7 @@ public class Dop {
                 break;
             } else {                                       //если введено неверное число
                 if (count == 0) {                          //первая проверка неверного числа
-                    dif1 = Math.abs((i - num));
+                    dif1 = Math.abs((i - num));            //разница до истинного значения при первом вводе
 
                     {if (dif1 < dif2) {fact = "Горячо!";}
                     else {fact = "Холодно!";}}
@@ -43,7 +43,7 @@ public class Dop {
                     count = 1;
                 }
                 else     {                                  //вторая проверка неверного числа
-                    dif2 = Math.abs((i - num));
+                    dif2 = Math.abs((i - num));            //разница до истинного значения при втором вводе
 
                     {if (dif2 < dif1) {fact = "Горячо!";}
                     else {fact = "Холодно!";}}
