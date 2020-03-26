@@ -1,16 +1,13 @@
-package ru.baranov;
+package task3;
 
 //Написать консольное Java-приложение «Горячо-Холодно»
 
 import java.util.Random;                                                  //подклюение библиотеки
 import java.util.Scanner;
 
-public class task_3_dop {
-
+public class Dop {
     public static void main(String[] args) {
-        int min = 0;                                                     //минимум
-        int max = 100;                                                   //максимум
-        int diff = max - min;                                            //диапазон
+        int min = 0, max = 100, diff = max - min;
         Random random = new Random();                                   //инициализация рандома
         int i = random.nextInt(diff + 1);                        // генерирация целого числа, включая max
         i += min;
