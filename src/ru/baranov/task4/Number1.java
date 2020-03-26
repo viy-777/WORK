@@ -1,10 +1,9 @@
-package ru.baranov;
-
-//Написать программу для поиска минимального из двух чисел.
+package ru.baranov.task4;
 
 import java.util.Scanner;
 
-public class task_4_1 {
+public class Number1 {
+
     public static void main(String[] args) {
 
         System.out.println("Программа для поиска минимального из двух чисел");
@@ -21,5 +20,5 @@ public class task_4_1 {
         if (num1 > num2) System.out.println("Первое число больше второго");
         if (num1 < num2) System.out.println("Первое число меньше второго");
         if (num1 == num2) System.out.println("Первое число равно второму");
-}
+    }
 }
