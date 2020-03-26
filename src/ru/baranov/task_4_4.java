@@ -14,6 +14,7 @@ public class task_4_4 {
 
         System.out.println("Введите первый член прогрессии:");   //ввод пользователем числа
         Scanner in = new Scanner(System.in);
+
         num1 = in.nextInt();
 
         System.out.println("Введите число членов:");   //ввод пользователем числа
