@@ -7,6 +7,6 @@ public class NumberFirst {
         int quantity = 5;
 
         sum = cost*quantity;
-        System.out.println("Стоимость топлива: "+ sum+" руб.");
+        System.out.println("Стоимость топлива: " + sum + " руб.");
     }
 }

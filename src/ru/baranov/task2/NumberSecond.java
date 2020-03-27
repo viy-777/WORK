@@ -7,7 +7,7 @@ public class NumberSecond {
         int tax;
 
         tax = 13;
-        zp_ = zp-zp*tax/100;
-        System.out.println("Зарплата за вычетом налога: "+ zp_+" руб.");
+        zp_ = zp - zp*tax/100;
+        System.out.println("Зарплата за вычетом налога: " + zp_ + " руб.");
     }
 }

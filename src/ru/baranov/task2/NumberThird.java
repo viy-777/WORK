@@ -7,6 +7,6 @@ public class NumberThird {
         double hour;
 
         hour = (double)sec/3600;
-        System.out.println("Количество часов: "+ hour+" ч.");
+        System.out.println("Количество часов: "+ hour + " ч.");
     }
 }
