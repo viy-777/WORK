@@ -17,21 +17,18 @@ public class DopZad {
         Scanner in = new Scanner(System.in);
         num = in.nextInt();
 
-        boolean gameover = true;
         int dif1 = 0, dif2 = 100, count = 0;
         String fact;
 
-        while (gameover == true) {
-            if (num == 0) {                               //принудительное завершение цикла
-                gameover = false;
+        while (true) {
+            if (num == 0) {                                //принудительный выход из программы
                 break;
             }
-            else if (num == i) {                         //условие правильного ввода числа
+            else if (num == i) {                           //правильный ввод числа
                 System.out.println("Вы угадали число!");
-                gameover = false;
                 break;
             }
-            else {                                       //если введено неверное число
+            else {                                         //если введено неверное число
                 if (count == 0) {                          //первая проверка неверного числа
                     dif1 = Math.abs((i - num));            //разница до истинного значения при первом вводе
 
