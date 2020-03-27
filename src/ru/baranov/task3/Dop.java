@@ -11,7 +11,7 @@ public class Dop {
         Random random = new Random();                                   //инициализация рандома
         int i = random.nextInt(diff + 1);                        // генерирация целого числа, включая max
         i += min;
-        System.out.println("Случайное число в диапазоне 0..100: " + i);
+        //System.out.println("Случайное число в диапазоне 0..100: " + i);
 
         int num = 0;                                    //ввод пользователем числа
         System.out.println("Введите число от 0 до 100 (для выхода введите '0'):");
