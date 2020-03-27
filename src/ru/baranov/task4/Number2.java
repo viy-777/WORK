@@ -16,17 +16,15 @@ public class Number2 {
         Scanner in = new Scanner(System.in);
         num = in.nextInt();
 
-        if (num % 2 == 0) even = true;                //проверка на четность
-        else
-            even = false;
-
-        if (even) {
-            if (num > 0) System.out.println("Число положительное, четное");
-            if (num < 0) System.out.println("Число отрицательное, четное");}
-        else {
-            if (num > 0) System.out.println("Число положительное, нечетное");
-            if (num < 0) System.out.println("Число отрицательное, нечетное");}
-
         if (num == 0) System.out.println("Число нулевое");
+        else {
+            if (num % 2 == 0) {
+                if (num > 0) System.out.println("Число положительное, четное");
+                if (num < 0) System.out.println("Число отрицательное, четное");
+            } else {
+                if (num > 0) System.out.println("Число положительное, нечетное");
+                if (num < 0) System.out.println("Число отрицательное, нечетное");
+            }
+        }
     }
 }
