@@ -20,7 +20,8 @@ public class NumberSecond {
             if (num % 2 == 0) {
                 if (num > 0) System.out.println("Число положительное, четное");
                 if (num < 0) System.out.println("Число отрицательное, четное");
-            } else {
+            }
+            else {
                 if (num > 0) System.out.println("Число положительное, нечетное");
                 if (num < 0) System.out.println("Число отрицательное, нечетное");
             }

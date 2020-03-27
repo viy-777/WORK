@@ -21,7 +21,8 @@ public class NumberFirst {
         else {
             if (num1 < num2) System.out.println("Минимальное число: " + num1);
             else {
-                System.out.println("Минимальное число: " + num2);}
+                System.out.println("Минимальное число: " + num2);
+            }
         }
     }
 }
