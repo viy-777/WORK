@@ -3,7 +3,7 @@ package ru.baranov.task3;
 import java.util.Random;
 import java.util.Scanner;
 
-public class Dop {
+public class DopZad {
 
     public static void main(String[] args) {
         int min = 0, max = 100, diff = max - min;
@@ -22,7 +22,7 @@ public class Dop {
         String fact;
 
         while (gameover == true) {
-             if (num == 0) {                               //принудительное завершение цикла
+            if (num == 0) {                               //принудительное завершение цикла
                 gameover = false;
                 break;
             } else if (num == i) {                         //условие правильного ввода числа
@@ -48,12 +48,12 @@ public class Dop {
                     else {fact = "Холодно!";}}
 
                     System.out.println(fact + " Введите число от 0 до 100 (для выхода введите '0'):");
-                        num = in.nextInt();
+                    num = in.nextInt();
 
                     count = 0;
-                    }
+                }
 
             }
-    }
+        }
     }
 }

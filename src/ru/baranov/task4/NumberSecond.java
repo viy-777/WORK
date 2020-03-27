@@ -2,8 +2,7 @@ package ru.baranov.task4;
 
 import java.util.Scanner;
 
-public class Number2 {
-
+public class NumberSecond {
 
     public static void main(String[] args) {
 

@@ -2,7 +2,7 @@ package ru.baranov.task4;
 
 import java.util.Scanner;
 
-public class Number1 {
+public class NumberFirst {
 
     public static void main(String[] args) {
 
@@ -22,6 +22,6 @@ public class Number1 {
             if (num1 < num2) System.out.println("Минимальное число: " + num1);
             else {
                 System.out.println("Минимальное число: " + num2);}
-            }
         }
     }
+}
