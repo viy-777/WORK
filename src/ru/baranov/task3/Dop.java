@@ -8,7 +8,8 @@ public class Dop {
 
     public static void main(String[] args) {
         int min = 0, max = 100, diff = max - min;
-        Random random = new Random();                                   //инициализация рандома
+        Random random;                                   //инициализация рандома
+        random = new Random();
         int i = random.nextInt(diff + 1);                        // генерирация целого числа, включая max
         i += min;
         //System.out.println("Случайное число в диапазоне 0..100: " + i);
