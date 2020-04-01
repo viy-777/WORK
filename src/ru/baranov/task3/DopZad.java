@@ -7,7 +7,7 @@ public class DopZad {
 
     public static void main(String[] args) {
         int min = 0, max = 100, diff = max - min;
-        Random random;                                   //инициализация рандома
+        Random random;
         random = new Random();
         int i = random.nextInt(diff + 1);                        // генерирация целого числа, включая max
         i += min;
@@ -24,28 +24,35 @@ public class DopZad {
             if (num == 0) {                                //принудительный выход из программы
                 break;
             }
-            else if (num == i) {                           //правильный ввод числа
+            if (num == i) {                           //правильный ввод числа
                 System.out.println("Вы угадали число!");
                 break;
             }
-            else {                                         //если введено неверное число
+            {                                         //если введено неверное число
                 if (count == 0) {                          //первая проверка неверного числа
                     dif1 = Math.abs((i - num));            //разница до истинного значения при первом вводе
 
-                    {if (dif1 < dif2) {fact = "Горячо!";}
-                    else {fact = "Холодно!";}
+                    {
+                        if (dif1 < dif2) {
+                            fact = "Горячо!";
+                        } else {
+                            fact = "Холодно!";
+                        }
                     }
 
                     System.out.println(fact + " Введите число от 0 до 100 (для выхода введите '0'):");
                     num = in.nextInt();
 
                     count = 1;
-                }
-                else     {                                  //вторая проверка неверного числа
+                } else {                                  //вторая проверка неверного числа
                     dif2 = Math.abs((i - num));            //разница до истинного значения при втором вводе
 
-                    {if (dif2 < dif1) {fact = "Горячо!";}
-                    else {fact = "Холодно!";}
+                    {
+                        if (dif2 < dif1) {
+                            fact = "Горячо!";
+                        } else {
+                            fact = "Холодно!";
+                        }
                     }
 
                     System.out.println(fact + " Введите число от 0 до 100 (для выхода введите '0'):");
