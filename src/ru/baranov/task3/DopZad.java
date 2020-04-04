@@ -9,7 +9,7 @@ public class DopZad {
         int min = 0, max = 100, diff = max - min;
         Random random;
         random = new Random();
-        int i = random.nextInt(diff + 1);                        // генерирация целого числа, включая max
+        int i = random.nextInt(diff + 1);                        // генерация целого числа, включая max
         i += min;
 
         int num = 0;                                    //ввод пользователем числа
