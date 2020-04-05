@@ -35,7 +35,7 @@ class Calculator {
                 System.out.println("Результат деления: " + var1 + " " + act + " " + var2 + " = " + (var1 / var2));
                 break;
             case ("%"):
-                System.out.println("Результат вычисления процента: " + var1 + " " + act + " " + var2 + " = " + (var1 * 100 / var2) + "%");
+                System.out.println("Результат вычисления процента: " + var1 + " от " + var2 + " = " + (var1 * 100 / var2) + "%");
                 break;
             default:
         }
