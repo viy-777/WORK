@@ -46,12 +46,28 @@ class Animal2 extends Animal {
     }
 }
 
+class Animal3 extends Animal {
+    private String name3;
+
+    public Animal3(String name) {
+        super(name);
+        this.name3 = name;
+    }
+
+    @Override
+    public void display() {
+        System.out.printf("Животное3: %s \n", super.getName());
+    }
+}
+
 public class NumberFirst {
     public static void main(String[] args) {
-        Animal1 a1 = new Animal1("Тигр");
+        Animal1 a1 = new Animal1("Утка");
         Animal2 a2 = new Animal2("Леопард");
+        Animal3 a3 = new Animal3("Бобер");
 
         a1.display();
         a2.display();
+        a3.display();
     }
 }
