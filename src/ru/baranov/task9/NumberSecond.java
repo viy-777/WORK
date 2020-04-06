@@ -59,7 +59,7 @@ class An3 implements Run, Swim {
 
 public class NumberSecond {
     public static void main(String[] args) {
-        An1 a1 = new An1("Ящерица");
+        An1 a1 = new An1("Орел");
         a1.fly_();
 
         An2 a2 = new An2("Курица");
