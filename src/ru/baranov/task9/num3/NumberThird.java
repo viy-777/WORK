@@ -3,45 +3,6 @@ package ru.baranov.task9.num3;
 //Написать абстрактный класс Человек реализующий интерфейсы «бежать» и «плавать» (в каждом сделать 1-2 метода).
 //Сделать несколько наследников этого класса с конкретной реализацией методов, которые объявлены в интерфейсах.
 
-interface Runnable {
-    void running();
-
-    void chempRunning();
-}
-
-interface Swimmable {
-    void swimming();
-
-    void chempSwimming();
-}
-
-abstract class Man implements Runnable, Swimmable {
-    private String name;                                   //поля
-    private int age;                                       //поля
-
-    Man(String name, int age) {                      //создание конструктора с параметрами
-        this.name = name;
-        this.age = age;
-    }
-
-    public void running() {
-        System.out.printf("Бегун с именем %s (возраст %d) \n", name, age);
-    }
-
-    public void chempRunning() {
-        System.out.printf("Чемпион по бегу %s (возраст %d) \n", name, age);
-    }
-
-    public void swimming() {
-        System.out.printf("Пловец с именем %s (возраст %d) \n", name, age);
-    }
-
-    public void chempSwimming() {
-        System.out.printf("Чемпион по плаванию %s (возраст %d) \n", name, age);
-    }
-
-}
-
 public class NumberThird {
     public static void main(String[] args) {
 
