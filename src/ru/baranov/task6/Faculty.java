@@ -1,12 +1,12 @@
 package ru.baranov.task6;
 
 public class Faculty {
-    String name;
-    int number_specialties;
+    private String name;
+    private int number_specialties;
 
     Faculty(String name, int number_specialties) {
-        this.name = name;//"Физический";
-        this.number_specialties = number_specialties;
+        name = name;//"Физический";
+        number_specialties = number_specialties;
     }
 
     void displayInfo() {

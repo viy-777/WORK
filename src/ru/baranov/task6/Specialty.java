@@ -5,8 +5,8 @@ public class Specialty {
     int mark;
 
     Specialty(String name, int mark) {
-        this.name = name;
-        this.mark = mark;
+        name = name;
+        mark = mark;
     }
 
     public String getName() {

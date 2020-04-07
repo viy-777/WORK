@@ -5,12 +5,12 @@ import java.util.Scanner;
 public class Contract {
     static int number = 0;
     static String date = "";
-    static String contain[] = new String[3];
+    static String[] contain = new String[3];
 
     public Contract() {
-        this.number = number;
-        this.date = date;
-        this.contain = contain;
+        number = number;
+        date = date;
+        contain = contain;
     }
 
     public static int getNumber() {
