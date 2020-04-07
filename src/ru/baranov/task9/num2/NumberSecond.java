@@ -4,69 +4,69 @@ package ru.baranov.task9.num2;
 // Добавить классам животных из предыдущего задания имплементацию этих интерфейсов.
 // Некоторые животные могут реализовать больше одного интерфейса (утка может и плавать, и летать и бегать).
 
-interface FLy {
-    void fly_();
+interface FLyable {
+    void fly();
 }
 
-interface Run {
-    void run_();
+interface Runnable {
+    void run();
 }
 
-interface Swim {
-    void swim_();
+interface Swimmable {
+    void swim();
 }
 
 
-class An1 implements FLy {
+class AnimalFirst implements FLyable {
     String name;
 
-    An1(String name) {
+    AnimalFirst(String name) {
         this.name = name;
     }
 
-    public void fly_() {
+    public void fly() {
         System.out.printf("Летающее животное: %s \n", name);
     }
 }
 
-class An2 implements Run {
+class AnimalSecond implements Runnable {
     String name;
 
-    An2(String name) {
+    AnimalSecond(String name) {
         this.name = name;
     }
 
-    public void run_() {
+    public void run() {
         System.out.printf("Бегающее животное: %s \n", name);
     }
 }
 
-class An3 implements Run, Swim {
+class AnimalThird implements Runnable, Swimmable {
     String name;
 
-    An3(String name) {
+    AnimalThird(String name) {
         this.name = name;
     }
 
-    public void swim_() {
+    public void swim() {
         System.out.printf("Плавающее животное: %s \n", name);
     }
 
-    public void run_() {
+    public void run() {
         System.out.printf("Бегающее животное: %s \n", name);
     }
 }
 
 public class NumberSecond {
     public static void main(String[] args) {
-        An1 a1 = new An1("Орел");
-        a1.fly_();
+        AnimalFirst a1 = new AnimalFirst("Орел");
+        a1.fly();
 
-        An2 a2 = new An2("Курица");
-        a2.run_();
+        AnimalSecond a2 = new AnimalSecond("Курица");
+        a2.run();
 
-        An3 a3 = new An3("Бобер");
-        a3.swim_();
-        a3.run_();
+        AnimalThird a3 = new AnimalThird("Бобер");
+        a3.swim();
+        a3.run();
     }
 }
