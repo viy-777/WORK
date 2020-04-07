@@ -1,4 +1,4 @@
-package ru.baranov.task8;
+package ru.baranov.task8.num1;
 
 final class Anthill {
 

@@ -1,16 +1,13 @@
-package ru.baranov.task8;
+package ru.baranov.task8.num2;
 
 import java.util.Scanner;
 
-class Calculator {
-    private static double var1 = 0, var2 = 0;
-    private static String act = "";
+public class Calculator {
 
-    public static String getAct() {
-        return act;
-    }
+    static double var1 = 0, var2 = 0;
+    static String act = "";
 
-    public void Count() {
+    public static void Count() {
         System.out.println("Введите первое число:");
         Scanner in = new Scanner(System.in);
         var1 = in.nextDouble();
@@ -21,7 +18,7 @@ class Calculator {
         System.out.println("Введите действие:");
         act = in.next();
 
-        switch (Calculator.getAct()) {                                                                                    //обращение к статической переменной класса Calculator
+        switch (act) {
             case ("-"):
                 System.out.println("Результат вычитания: " + var1 + " " + act + " " + var2 + " = " + (var1 - var2));
                 break;
@@ -35,20 +32,9 @@ class Calculator {
                 System.out.println("Результат деления: " + var1 + " " + act + " " + var2 + " = " + (var1 / var2));
                 break;
             case ("%"):
-                System.out.println("Результат вычисления процента: " + var1 + " от " + var2 + " = " + (var1 * 100 / var2) + "%");
+                System.out.println("Результат вычисления процента: " + var1 + " от " + var2 + " = " + (var1 * 100 /
+                        var2) + "%");
                 break;
-            default:
         }
-        return;
-
-
-    }
-}
-
-public class NumberSecond {
-
-    public static void main(String[] args) {
-        Calculator c = new Calculator();
-        c.Count();
     }
 }

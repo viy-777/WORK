@@ -1,4 +1,4 @@
-package ru.baranov.task8;
+package ru.baranov.task8.num4;
 
 class Contract {                                              //договор
     static int number = 0;

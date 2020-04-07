@@ -1,4 +1,4 @@
-package ru.baranov.task8;
+package ru.baranov.task8.num3;
 
 class Test {
     static int num_objects = 0;

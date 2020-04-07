@@ -1,4 +1,4 @@
-package ru.baranov.task9;
+package ru.baranov.task9.num1;
 
 //Написать абстрактный класс Animal с абстрактным методом getName.
 //Сделать несколько классов животных, наследников Animal.
