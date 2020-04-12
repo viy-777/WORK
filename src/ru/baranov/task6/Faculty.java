@@ -5,8 +5,8 @@ public class Faculty {
     private int number_specialties;
 
     Faculty(String name, int number_specialties) {
-        name = name;//"Физический";
-        number_specialties = number_specialties;
+        this.name = name;
+        this.number_specialties = number_specialties;
     }
 
     void displayInfo() {

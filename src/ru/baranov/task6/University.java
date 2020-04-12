@@ -1,15 +1,14 @@
 package ru.baranov.task6;
 
 public class University {
-    private String name;
-    private int number_faculties;
+    private String name = "МГУ";
+    private int number_faculties = 44;
 
-    University(String name, int number_faculties) {
-        name = name;
-        number_faculties = number_faculties;
+    public String getName() {
+        return name;
     }
 
-    void displayInfo() {
-        System.out.println("Университет: " + name + ", кол-во факультетов: " + number_faculties);
+    public int getNumber_faculties() {
+        return number_faculties;
     }
 }

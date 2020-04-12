@@ -6,10 +6,10 @@ package ru.baranov.task9.num3;
 public class NumberThird {
     public static void main(String[] args) {
 
-        /*Man m1 = new Man("Егор", 44);
+        Man1 m1 = new Man1("", "");
         m1.running();
 
-        Man m2 = new Man("Татьяна", 23);
+        /*Man m2 = new Man("Татьяна", 23);
         m2.chempRunning();
 
         Man m3 = new Man("Джон", 30);
