@@ -6,16 +6,11 @@ package ru.baranov.task9.num3;
 public class NumberThird {
     public static void main(String[] args) {
 
-        Man1 m1 = new Man1("Педро", "перуанец", 45);
-        m1.Info();
-
-        /*Man m2 = new Man("Татьяна", 23);
-        m2.chempRunning();
-
-        Man m3 = new Man("Джон", 30);
-        m3.swimming();
-
-        Man m4 = new Man("Сергей", 24);
-        m4.chempSwimming();*/
+        Runnable m1 = new Man1("Педро", "перуанец", 45);
+        m1.run();
+        Runnable m2 = new Man2("Сергей", "русский", 22);
+        m2.run();
+        Swimmable m3 = new Man3("Лука", "хорват", 27);
+        m3.swim();
     }
 }

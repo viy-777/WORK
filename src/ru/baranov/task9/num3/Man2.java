@@ -1,9 +1,9 @@
 package ru.baranov.task9.num3;
 
-public class Man1 extends Man {
+public class Man2 extends Man {
     private int age;
 
-    public Man1(String name, String nationality, int age) {
+    public Man2(String name, String nationality, int age) {
         super(name, nationality);
         this.age = age;
     }
