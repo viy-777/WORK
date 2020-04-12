@@ -6,8 +6,8 @@ package ru.baranov.task9.num3;
 public class NumberThird {
     public static void main(String[] args) {
 
-        Man1 m1 = new Man1("", "");
-        m1.running();
+        Man1 m1 = new Man1("Педро", "перуанец", 45);
+        m1.Info();
 
         /*Man m2 = new Man("Татьяна", 23);
         m2.chempRunning();
