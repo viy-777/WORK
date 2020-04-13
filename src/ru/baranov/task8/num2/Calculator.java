@@ -1,40 +1,55 @@
 package ru.baranov.task8.num2;
 
-import java.util.Scanner;
-
 public class Calculator {
 
-    static double var1 = 0, var2 = 0;
-    static String act = "";
+    private static double var1, var2, res;
+    private static String action;
 
-    public static void Count() {
-        System.out.println("Введите первое число:");
-        Scanner in = new Scanner(System.in);
-        var1 = in.nextDouble();
+    public static double getVar1() {
+        return var1;
+    }
 
-        System.out.println("Введите второе число:");
-        var2 = in.nextDouble();
+    public static double getVar2() {
+        return var2;
+    }
 
-        System.out.println("Введите действие:");
-        act = in.next();
+    public static String getAction() {
+        return action;
+    }
 
-        switch (act) {
-            case ("-"):
-                System.out.println("Результат вычитания: " + var1 + " " + act + " " + var2 + " = " + (var1 - var2));
-                break;
-            case ("+"):
-                System.out.println("Результат сложения: " + var1 + " " + act + " " + var2 + " = " + (var1 + var2));
-                break;
-            case ("*"):
-                System.out.println("Результат умножения: " + var1 + " " + act + " " + var2 + " = " + (var1 * var2));
-                break;
-            case ("/"):
-                System.out.println("Результат деления: " + var1 + " " + act + " " + var2 + " = " + (var1 / var2));
-                break;
-            case ("%"):
-                System.out.println("Результат вычисления процента: " + var1 + " от " + var2 + " = " + (var1 * 100 /
-                        var2) + "%");
-                break;
-        }
+    public static double getRes() {
+        return res;
+    }
+
+    public static void setVar1(double var1) {
+        Calculator.var1 = var1;
+    }
+
+    public static void setVar2(double var2) {
+        Calculator.var2 = var2;
+    }
+
+    public static void setAction(String action) {
+        Calculator.action = action;
+    }
+
+    public static void countPlus() {
+        res = var1 + var2;
+    }
+
+    public static void countMinus() {
+        res = var1 - var2;
+    }
+
+    public static void countDiv() {
+        res = var1 / var2;
+    }
+
+    public static void countMul() {
+        res = var1 * var2;
+    }
+
+    public static void countProc() {
+        res = (var1 * 100) / var2;
     }
 }
