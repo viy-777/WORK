@@ -1,21 +1,23 @@
 package ru.baranov.task8.num4;
 
-public class Statement extends Contract {
-    static int number_ = 0;
-    static String date_ = "";
-    static String contain_[] = new String[3];
+public class Statement {
+    private int number;
+    private String date;
+    private String contain[] = new String[3];
+
+    public Statement(int number, String date, String contain[]) {
+        this.number = number;
+        this.date = date;
+        this.contain = contain;
+    }
 
     public void st() {
-        number_ = getNumber();
-        date_ = getDate();
-        contain_ = getContain();
-
         System.out.println();
         System.out.println("----Договор----");
-        System.out.println("Номер: " + number_);
-        System.out.println("Дата: " + date_);
-        for (int i = 0; i < contain_.length; i++) {
-            System.out.println("Товар №" + (i + 1) + " : " + contain_[i]);
+        System.out.println("Номер: " + number);
+        System.out.println("Дата: " + date);
+        for (int i = 0; i < contain.length; i++) {
+            System.out.println("Товар №" + (i + 1) + " : " + contain[i]);
         }
     }
 }

@@ -3,38 +3,32 @@ package ru.baranov.task8.num4;
 import java.util.Scanner;
 
 public class Contract {
-    static int number = 0;
-    static String date = "";
-    static String[] contain = new String[3];
+    private int number;
+    private String date;
+    private String[] contain = new String[3];
 
-    public Contract() {
-        number = number;
-        date = date;
-        contain = contain;
-    }
-
-    public static int getNumber() {
+    public int getNumber() {
         return number;
     }
 
-    public static String getDate() {
+    public String getDate() {
         return date;
     }
 
-    public static String[] getContain() {
+    public String[] getContain() {
         return contain;
     }
 
-    public static void setNumber(int number) {
-        Contract.number = number;
+    public void setNumber(int number) {
+        this.number = number;
     }
 
-    public static void setDate(String date) {
-        Contract.date = date;
+    public void setDate(String date) {
+        this.date = date;
     }
 
-    public static void setContain(String[] contain) {
-        Contract.contain = contain;
+    public void setContain(String[] contain) {
+        this.contain = contain;
     }
 
     public void c() {
