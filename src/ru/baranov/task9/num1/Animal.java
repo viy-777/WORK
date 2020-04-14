@@ -5,7 +5,7 @@ abstract public class Animal {
 
     public String getName() {
         return name;
-    }
+    }//ABSTRACT
 
     public Animal(String name) {
         this.name = name;

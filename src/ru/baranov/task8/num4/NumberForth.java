@@ -9,7 +9,7 @@ public class NumberForth {
         Contract a = new Contract();
         a.c();
 
-        Statement d = new Statement(a.getNumber(), a.getDate(), a.getContain());
+        Statement d = new Statement(a.getNumber(), a.getDate(), a.getContain());//КОНВЕРТЕР
         d.st();
     }
 }
