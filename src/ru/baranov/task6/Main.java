@@ -4,7 +4,7 @@ public class Main {
     public static void main(String[] args) {
 
         University u = new University();
-        System.out.println("Университет: " + u.getName() + ", кол-во факультетов: " + u.getNumber_faculties());
+        System.out.println("Университет: " + u.getName() + ", кол-во факультетов: " + u.getNumberFaculties());
 
         Faculty f = new Faculty("Физический", 27);
         f.displayInfo();
