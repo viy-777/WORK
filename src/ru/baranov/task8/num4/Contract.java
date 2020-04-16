@@ -19,20 +19,8 @@ public class Contract {
         return contain;
     }
 
-    public void setNumber(int number) {
-        this.number = number;
-    }
-
-    public void setDate(String date) {
-        this.date = date;
-    }
-
-    public void setContain(String[] contain) {
-        this.contain = contain;
-    }
-
     public void c() {
-        System.out.println("----Акт----");
+        System.out.println("----Договор----");
         System.out.println("Номер:");
         Scanner in = new Scanner(System.in);
         number = in.nextInt();

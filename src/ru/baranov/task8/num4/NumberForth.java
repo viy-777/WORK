@@ -6,10 +6,16 @@ package ru.baranov.task8.num4;
 
 public class NumberForth {
     public static void main(String[] args) {
-        Contract a = new Contract();
-        a.c();
+        Contract contract = new Contract();
+        contract.c();
 
-        Statement d = new Statement(a.getNumber(), a.getDate(), a.getContain());//КОНВЕРТЕР
-        d.st();
+        System.out.println();
+        System.out.println("----Акт----");
+        System.out.println("Номер: " + contract.getNumber());
+        System.out.println("Дата: " + contract.getDate());
+
+        for (int i = 0; i < contract.getContain().length; i++) {
+            System.out.println("Товар №" + (i + 1) + " : " + contract.getContain()[i]);
+        }
     }
 }
