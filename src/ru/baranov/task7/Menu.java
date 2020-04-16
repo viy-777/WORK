@@ -1,5 +1,7 @@
 package ru.baranov.task7;
 
+//«Вендинговый автомат»
+
 import java.util.Scanner;
 
 public class Menu {
@@ -9,57 +11,30 @@ public class Menu {
         int numUser = 0;
         double moneyUser = 0;
 
+        Drinks[] d = Drinks.values();
+
         System.out.println("Меню:");
-        for (Drink number : Drink.values()) {
-            System.out.println("напиток №" + number.number + ": " + number.name + " - " + number.price + " руб.");
+        for (Drinks drinks : Drinks.values()) {
+            System.out.println("напиток №" + (drinks.ordinal() + 1) + ": " + drinks.name() + " - " + drinks.price + " руб.");
         }
 
-        System.out.println();
-        System.out.println("Выберите номер напитка:");
         Scanner in = new Scanner(System.in);
-        numUser = in.nextInt();
-
         System.out.println();
-        System.out.println("Пополните счет:");
-        moneyUser = in.nextDouble();
 
-        if ((numUser > Drink.values().length) || (numUser <= 0)) {
-            System.out.println("Введен несуществующий номер напитка!");
+        while (numUser <= 0 || numUser > Drinks.values().length) {
+            System.out.println("Выберите номер напитка:");
+            numUser = in.nextInt();
         }
 
-        if (moneyUser == 0) {
-            System.out.println("Отсутствуют денежные средства!");
+        while (moneyUser <= 0) {
+            System.out.println("Пополните счет:");
+            moneyUser = in.nextDouble();
         }
 
-        switch (numUser) {
-            case 1:
-                if (Drink.DRINK1.price > moneyUser) {
-                    System.out.println("Недостаточно денежных средств!");
-                    break;
-                }
-                System.out.println("Получите напиток " + Drink.DRINK1.name);
-                break;
-            case 2:
-                if (Drink.DRINK2.price > moneyUser) {
-                    System.out.println("Недостаточно денежных средств!");
-                    break;
-                }
-                System.out.println("Получите напиток " + Drink.DRINK2.name);
-                break;
-            case 3:
-                if (Drink.DRINK3.price > moneyUser) {
-                    System.out.println("Недостаточно денежных средств!");
-                    break;
-                }
-                System.out.println("Получите напиток " + Drink.DRINK3.name);
-                break;
-            case 4:
-                if (Drink.DRINK4.price > moneyUser) {
-                    System.out.println("Недостаточно денежных средств!");
-                    break;
-                }
-                System.out.println("Получите напиток " + Drink.DRINK4.name);
-                break;
+        if (d[numUser - 1].price > moneyUser) {
+            System.out.println("Недостаточно денежных средств!");
+        } else {
+            System.out.println("Получите напиток " + d[numUser - 1].name());
         }
     }
-    }
+}
