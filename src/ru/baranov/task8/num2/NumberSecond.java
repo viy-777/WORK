@@ -23,12 +23,24 @@ public class NumberSecond {
         System.out.println("Введите действие:");
         action = in.next();
 
-        if (action.equals("+")) Calculator.countPlus(var1, var2);
-        else if (action.equals("-")) Calculator.countMinus(var1, var2);
-        else if (action.equals("*")) Calculator.countMul(var1, var2);
-        else if (action.equals("/")) Calculator.countDiv(var1, var2);
-        else if (action.equals("%")) Calculator.countProc(var1, var2);
+        switch (action) {
+            case "+":
+                Calculator.countPlus(var1, var2);
+                break;
+            case "-":
+                Calculator.countMinus(var1, var2);
+                break;
+            case "*":
+                Calculator.countMul(var1, var2);
+                break;
+            case "/":
+                Calculator.countDiv(var1, var2);
+                break;
+            case "%":
+                Calculator.countProc(var1, var2);
+                break;
+        }
 
-        System.out.println(var1 + " " + " " + action + " " + var2 + " = " + Calculator.getRes());
+        System.out.println(var1 + " " + " " + action + " " + var2 + " = " + Calculator.res);
     }
 }

@@ -1,30 +1,26 @@
 package ru.baranov.task8.num2;
 
 public class Calculator {
-    private static double res;
-    private static String action;
+    public static double res;
 
-    public static double getRes() {
-        return res;
+    public static void countPlus(double var1, double var2) {
+        res = var1 + var2;
     }
 
-    public static double countPlus(double var1, double var2) {
-        return res = var1 + var2;
+    public static void countMinus(double var1, double var2) {
+        res = var1 - var2;
     }
 
-    public static double countMinus(double var1, double var2) {
-        return res = var1 - var2;
+    public static void countDiv(double var1, double var2) {
+        res = var1 / var2;
     }
 
-    public static double countDiv(double var1, double var2) {
-        return res = var1 / var2;
+    public static void countMul(double var1, double var2) {
+        res = var1 * var2;
     }
 
-    public static double countMul(double var1, double var2) {
-        return res = var1 * var2;
+    public static void countProc(double var1, double var2) {
+        res = (var1 * 100) / var2;
     }
 
-    public static double countProc(double var1, double var2) {
-        return res = (var1 * 100) / var2;
-    }
 }
