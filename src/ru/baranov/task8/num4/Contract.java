@@ -3,23 +3,23 @@ package ru.baranov.task8.num4;
 import java.util.Scanner;
 
 public class Contract {
-    private int number;
-    private String date;
-    private String[] contain = new String[3];
+    private static int number;
+    private static String date;
+    private static String[] contain = new String[3];
 
-    public int getNumber() {
+    public static int getNumber() {
         return number;
     }
 
-    public String getDate() {
+    public static String getDate() {
         return date;
     }
 
-    public String[] getContain() {
+    public static String[] getContain() {
         return contain;
     }
 
-    public void c() {
+    public void data() {
         System.out.println("----Договор----");
         System.out.println("Номер:");
         Scanner in = new Scanner(System.in);
@@ -32,5 +32,7 @@ public class Contract {
             System.out.println("№" + (i + 1));
             contain[i] = in.next();
         }
+
+        Converted.conv();
     }
 }
