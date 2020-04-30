@@ -23,23 +23,21 @@ public class NumberSecond {
         System.out.println("Введите действие:");
         action = in.next();
 
-        Calculator calculator = new Calculator();
-
         switch (action) {
             case "+":
-                res = calculator.countPlus(var1, var2);
+                res = Calculator.countPlus(var1, var2);
                 break;
             case "-":
-                res = calculator.countMinus(var1, var2);
+                res = Calculator.countMinus(var1, var2);
                 break;
             case "*":
-                res = calculator.countMul(var1, var2);
+                res = Calculator.countMul(var1, var2);
                 break;
             case "/":
-                res = calculator.countDiv(var1, var2);
+                res = Calculator.countDiv(var1, var2);
                 break;
             case "%":
-                res = calculator.countProc(var1, var2);
+                res = Calculator.countProc(var1, var2);
                 break;
         }
 
