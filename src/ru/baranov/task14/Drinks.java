@@ -1,4 +1,4 @@
-package ru.baranov.task7;
+package ru.baranov.task14;
 
 public enum Drinks {
 
