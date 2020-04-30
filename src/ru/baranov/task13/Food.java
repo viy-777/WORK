@@ -1,14 +1,14 @@
 package ru.baranov.task13;
 
-public enum Foods {
+public enum Food {
     FOOD1("ЙОГУРТ"),
     FOOD2("СУП"),
     FOOD3("СОК"),
     FOOD4("КАША");
 
-    String f;
+    String name;
 
-    Foods(String f) {
-        this.f = f;
+    Food(String name) {
+        this.name = name;
     }
 }

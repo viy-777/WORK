@@ -1,16 +1,13 @@
 package ru.baranov.task13;
 
 public class Child {
-    public static boolean unpalatable;
 
-    public static void eat(int food) {
-        if ((food == 1) || (food == 3)) {
-            unpalatable = false;
-            System.out.println("Cпасибо. Cъел … за обе щеки");
+    public static void eat(String food) throws Exception {
+        if ((food.equals("ЙОГУРТ")) || (food.equals("СОК"))) {
+            System.out.println("Cъел … за обе щеки");
         } else {
-            if ((food == 2) || (food == 4)) {
-                unpalatable = true;
-                System.out.println("Cпасибо. Не хочу");
+            if ((food.equals("СУП")) || (food.equals("КАША"))) {
+                throw new Exception("Ребенку не нравится еда!");
             }
         }
     }

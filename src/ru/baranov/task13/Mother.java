@@ -14,26 +14,18 @@ package ru.baranov.task13;
 
 import java.util.Scanner;
 
-public class Main {
+public class Mother {
     public static void main(String[] args) {
-        int numFood;
 
-        System.out.println("Мама выбирает еду из списка:");
-        for (Foods foods : Foods.values()) {
-            System.out.println("№" + (foods.ordinal() + 1) + ": " + foods.f);
-        }
-        Scanner in = new Scanner(System.in);
-
-        System.out.println("Мама вводит номер продукта:");
-        numFood = in.nextInt();
-
-        Child.eat(numFood);
-
-        try {
-            if (Child.unpalatable)
-                throw new Exception("Ребенок не ест!");
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
+        for (Food foods : Food.values()) {
+            System.out.println("Мама дает ребенку " + foods.name);
+            try {
+                Child.eat(foods.name);
+            } catch (Exception e) {
+                System.out.println(e.getMessage());
+            } finally {
+                System.out.println("Спасибо!");
+            }
         }
     }
 }
