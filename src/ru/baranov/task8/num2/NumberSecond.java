@@ -10,7 +10,7 @@ public class NumberSecond {
 
     public static void main(String[] args) {
 
-        double var1, var2;
+        double var1, var2, res = 0;
         String action;
 
         System.out.println("Введите первое число:");
@@ -23,24 +23,26 @@ public class NumberSecond {
         System.out.println("Введите действие:");
         action = in.next();
 
+        Calculator calculator = new Calculator();
+
         switch (action) {
             case "+":
-                Calculator.countPlus(var1, var2);
+                res = calculator.countPlus(var1, var2);
                 break;
             case "-":
-                Calculator.countMinus(var1, var2);
+                res = calculator.countMinus(var1, var2);
                 break;
             case "*":
-                Calculator.countMul(var1, var2);
+                res = calculator.countMul(var1, var2);
                 break;
             case "/":
-                Calculator.countDiv(var1, var2);
+                res = calculator.countDiv(var1, var2);
                 break;
             case "%":
-                Calculator.countProc(var1, var2);
+                res = calculator.countProc(var1, var2);
                 break;
         }
 
-        System.out.println(var1 + " " + " " + action + " " + var2 + " = " + Calculator.res);
+        System.out.println(var1 + " " + " " + action + " " + var2 + " = " + res);
     }
 }
