@@ -6,7 +6,9 @@ package ru.baranov.task8.num4;
 
 public class NumberForth {
     public static void main(String[] args) {
-        Contract contract = new Contract();
-        Converter.converter(contract.getNumber(), contract.getDate(), contract.getContain());
+        Contract contract = new Contract(55, "01.01.2020", new String[]{"Книга", "Ручка", "Карандаш"});
+        System.out.println(contract);
+        Statement statement = Converter.convert(contract);
+        System.out.println(statement);
     }
 }

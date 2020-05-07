@@ -1,19 +1,28 @@
 package ru.baranov.task8.num4;
 
 public class Statement {
-    int number;
-    String date;
-    String contain[] = new String[3];
+    private final int number;
+    private final String date;
+    private String[] goods;
+
+    public Statement(int number, String date, String[] goods) {
+        this.number = number;
+        this.date = date;
+        this.goods = goods;
+    }
 
     public int getNumber() {
+
         return number;
     }
 
     public String getDate() {
+
         return date;
     }
 
-    public String[] getContain() {
-        return contain;
+    public String[] getGoods() {
+
+        return goods;
     }
 }
