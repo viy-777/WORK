@@ -1,37 +1,49 @@
 package ru.baranov.task18;
 
 import java.io.*;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
 import static java.nio.charset.StandardCharsets.ISO_8859_1;
 import static java.nio.charset.StandardCharsets.UTF_8;
 
 public class CodeChange {
 
-    char[] buf = new char[2048];
-    String text = "Много текста. Много текста.";
-    String name1 = "Task18_text1.txt";
-    String name2 = "Task18_text2.txt";
+    //создание директории
+    public void createDirectory(String name) {
+        Path path = Paths.get("Temp\\" + name);
+        if (!Files.exists(path)) {
+            try {
+                Path directory0 = Files.createDirectory(path);
+                System.out.println("Папка '" + name + "' успешно создана");
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        } else {
+            System.out.println("Папка '" + name + "' уже создана");
+        }
+    }
 
-    public void createFile(String text, String name) {
-        //Создание текстового файла
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter(name))) {
+    //Создание текстового файла
+    public void createFile(String text, String nameDir, String nameFile) {
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter("Temp\\" + nameDir + "\\" + nameFile))) {
             writer.write(text);
+            System.out.println("Файл '" + nameFile + "' успешно создан");
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
-    public void codeCh() {
+    char[] buf = new char[2048];
 
-        //Создание текстовых файлов
-        CodeChange codeChange = new CodeChange();
-        codeChange.createFile(text, name1);
-        codeChange.createFile("", name2);
+    public void codeCh(String nameDir, String nameFile1, String nameFile2) {
 
         //Чтение текстового файла №1 и запись в файл №2 с другой кодировкой
-        try (BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream(name1), UTF_8));
-             BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(name2), ISO_8859_1))) {
+        try (BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream("Temp\\" + nameDir + "\\" + nameFile1), UTF_8));
+             BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream("Temp\\" + nameDir + "\\" + nameFile2), ISO_8859_1))) {
             while (reader.read(buf) != -1) writer.write(buf);
+            System.out.println("Текст сохранен в другой кодировке");
         } catch (
                 IOException e) {
             e.printStackTrace();
