@@ -40,8 +40,10 @@ public class CodeChange {
     public void codeCh(String nameDir, String nameFile1, String nameFile2) {
 
         //Чтение текстового файла №1 и запись в файл №2 с другой кодировкой
-        try (BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream("Temp\\" + nameDir + "\\" + nameFile1), UTF_8));
-             BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream("Temp\\" + nameDir + "\\" + nameFile2), ISO_8859_1))) {
+        try (BufferedReader reader = new BufferedReader(
+                new InputStreamReader(new FileInputStream("Temp\\" + nameDir + "\\" + nameFile1), UTF_8));
+             BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(
+                     new FileOutputStream("Temp\\" + nameDir + "\\" + nameFile2), ISO_8859_1))) {
             while (reader.read(buf) != -1) writer.write(buf);
             System.out.println("Текст сохранен в другой кодировке");
         } catch (

@@ -16,7 +16,8 @@ public class Main {
         fileCtrl.createDirectory("task15\\folder2");
         fileCtrl.createFile("", "task15\\folder1", "File.txt");
         fileCtrl.renameFile("task15\\folder1", "File.txt", "File2.txt");
-        fileCtrl.copyFile("task15\\folder1", "task15\\folder2", "File2.txt", "File22.txt");
+        fileCtrl.copyFile("task15\\folder1", "task15\\folder2", "File2.txt",
+                "File22.txt");
         fileCtrl.deleteFile("task15\\folder2", "File22.txt");
 
         fileCtrl.recurs("Temp");

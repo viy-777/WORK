@@ -12,17 +12,14 @@ public class Statement {
     }
 
     public int getNumber() {
-
         return number;
     }
 
     public String getDate() {
-
         return date;
     }
 
     public String[] getGoods() {
-
         return goods;
     }
 }
