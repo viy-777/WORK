@@ -6,13 +6,16 @@ package ru.baranov.task21_2;
 //
 //Вывести массив в консоль до и после вызова метода по реверсу массива
 
-import ru.baranov.task21_1.MyArray;
-
-import java.io.*;
+import java.util.*;
 
 public class Main {
-    public static void main(String[] args) throws IOException {
-        MyArray2 myArray2 = new MyArray2();
-        myArray2.reverse();
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+
+        System.out.println("Введите длину массива:");
+        int length = in.nextInt();
+
+        MyArray2.makeArray(length);
+        MyArray2.reverse();
     }
 }

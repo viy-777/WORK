@@ -1,24 +1,33 @@
 package ru.baranov.task21_2;
 
+import java.util.*;
+
 public class MyArray2 {
-    int[] myArray = {5, 4, 99, 3, 7, 44, 77, 13, 51};
 
-    public void reverse() {
-        for (int value : myArray) {
-            System.out.print(value + " ");
+    protected static int[] myArray;
+
+    public static void makeArray(int length) {
+        Scanner in = new Scanner(System.in);
+        myArray = new int[length];
+        System.out.println("Введите элементы массива:");
+        for (int i = 0; i < length; i++) {
+            myArray[i] = in.nextInt();
         }
+        MyArray2.print();
+    }
 
-        System.out.println();
+    public static void print() {
+        System.out.println("Массив:" + Arrays.toString(MyArray2.myArray));
+    }
 
+    public static void reverse() {
         int n = myArray.length;
-        int tempVar;
         for (int i = 0; i < n / 2; i++) {
-            tempVar = myArray[n - i - 1];
+            int tempVar = myArray[n - i - 1];
             myArray[n - i - 1] = myArray[i];
             myArray[i] = tempVar;
         }
-        for (int value : myArray) {
-            System.out.print(value + " ");
-        }
+        System.out.println("После процедуры реверса:");
+        MyArray2.print();
     }
 }

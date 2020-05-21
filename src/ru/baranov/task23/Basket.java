@@ -1,5 +1,7 @@
 package ru.baranov.task23;
 
+import java.util.List;
+
 public interface Basket {
     void addProduct(String product, int quantity);
 
@@ -9,7 +11,7 @@ public interface Basket {
 
     void clear();
 
-    void getProducts();
+    List<String> getProducts();
 
-    void getProductQuantity(String product);
+    int getProductQuantity(String product);
 }
