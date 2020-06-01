@@ -14,46 +14,58 @@ public class Main {
         String clearBasket;
         Scanner in = new Scanner(System.in);
 
-        BasketSimple basketSimple = new BasketSimple();
+        SimpleBasket simpleBasket = new SimpleBasket();
 
-        basketSimple.addProduct("Футболка", 3);
-        basketSimple.addProduct("Носки", 5);
-        basketSimple.addProduct("Бейсболка", 1);
-        basketSimple.getProducts();
+        simpleBasket.addProduct("Футболка", 3);
+        simpleBasket.addProduct("Носки", 5);
+        simpleBasket.addProduct("Бейсболка", 1);
 
-        System.out.print("Добавьте товар в корзину: ");
+        System.out.println("Товаров в корзине:");
+        for (Object name : simpleBasket.getProducts()) {
+            int num = simpleBasket.getProducts().indexOf(name);
+            int quantity = simpleBasket.getQuantity().get(num);
+            System.out.println("№" + (num + 1) + " " + name + ", " + quantity + " шт.");
+        }
+
+        System.out.print("Добавьте товар в корзину ('-' - для пропуска): ");
         productName = in.next();
-        System.out.print("Укажите количество товара: ");
-        productQuantity = in.nextInt();
-        basketSimple.addProduct(productName, productQuantity);
-        basketSimple.getProducts();
+        if (!productName.equals("-")) {
+            System.out.print("Укажите количество товара: ");
+            productQuantity = in.nextInt();
+            simpleBasket.addProduct(productName, productQuantity);
+        }
 
         System.out.println("Выберите товар для удаления из корзины ('-' - для пропуска):");
         productToRemove = in.next();
-        if (!productToRemove.equals("-")) {
-            basketSimple.removeProduct(productToRemove);
-            basketSimple.getProducts();
-        }
+        if (!productToRemove.equals("-"))
+            simpleBasket.removeProduct(productToRemove);
 
         System.out.println("Обновление кол-ва товара ('-' - для пропуска):");
         productUpdate = in.next();
         if (!productUpdate.equals("-")) {
             quantityUpdate = in.nextInt();
-            basketSimple.updateProductQuantity(productUpdate, quantityUpdate);
-            basketSimple.getProducts();
+            simpleBasket.updateProductQuantity(productUpdate, quantityUpdate);
         }
 
         System.out.println("Получить кол-во товара ('-' - для пропуска):");
         singleProductQuantity = in.next();
         if (!singleProductQuantity.equals("-")) {
-            basketSimple.getProductQuantity(singleProductQuantity);
+            int num = simpleBasket.getProductQuantity(singleProductQuantity);
+            System.out.println("Кол-во товара (" + singleProductQuantity + ") в корзине: " + num + "шт.");
         }
 
         System.out.println("Очистить корзину (Да/Нет):");
         clearBasket = in.next();
         if (clearBasket.equals("Да")) {
-            basketSimple.clear();
-            basketSimple.getProducts();
+            simpleBasket.clear();
+            System.out.println("Товаров в корзине: -");
+        } else {
+            System.out.println("Товаров в корзине:");
+            for (Object name : simpleBasket.getProducts()) {
+                int num = simpleBasket.getProducts().indexOf(name);
+                int quantity = simpleBasket.getQuantity().get(num);
+                System.out.println("№" + (num + 1) + " " + name + ", " + quantity + " шт.");
+            }
         }
     }
 }
