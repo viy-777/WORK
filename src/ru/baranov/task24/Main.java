@@ -12,20 +12,21 @@ public class Main {
     public static void main(String[] args) {
 
         Set<String> beginset = new HashSet<>();
-        beginset.add("dfg");
-        beginset.add("dfgv");
-        beginset.add("sf");
-        beginset.add("dfffv");
-        beginset.add("dfew");
+        beginset.add("foo");
+        beginset.add("buzz");
+        beginset.add("bar");
+        beginset.add("fork");
+        beginset.add("bort");
+        beginset.add("spoon");
+        beginset.add("!");
+        beginset.add("dude");
 
         System.out.println("Исходные слова:");
         beginset.forEach(System.out::println);
 
         System.out.println("Слова с нечетной длиной:");
-
-        Set endset = new HashSet<>();
-        endset = RemoveEvenLength.removeEvenLength(beginset);
-
-        beginset.forEach(System.out::println);
+        Set<String> endset = new HashSet<>(beginset);
+        RemoveEvenLength.removeEvenLength(endset);
+        endset.forEach(System.out::println);
     }
 }
