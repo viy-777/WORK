@@ -38,11 +38,11 @@ public class SimpleBasket implements Basket {
 
     @Override
     public List<String> getProducts() {
-        return new ArrayList<>(listProduct);
+        return listProduct;
     }
 
     public List<Integer> getQuantity() {
-        return new ArrayList<>(listQuantity);
+        return listQuantity;
     }
 
     @Override

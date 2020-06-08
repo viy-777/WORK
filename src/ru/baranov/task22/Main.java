@@ -8,14 +8,14 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-        ArrayList<Person> persons = new ArrayList<Person>();
+        List<Person> persons = new ArrayList<>();
         persons.add(new Person(42, "Иван"));
         persons.add(new Person(18, "Юлия"));
         persons.add(new Person(18, "Олег"));
         persons.add(new Person(19, "Андрей"));
 
         for (Person person : persons)
-            System.out.println(person.toString());
+            System.out.println(person);
         System.out.println();
 
         persons.sort(new PersonSuperComparator());

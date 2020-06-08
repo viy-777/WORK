@@ -23,10 +23,12 @@ public class Main {
 
         System.out.println("Исходные слова:");
         beginset.forEach(System.out::println);
+        System.out.println();
 
         System.out.println("Слова с нечетной длиной:");
-        Set<String> endset = new HashSet<>(beginset);
-        RemoveEvenLength.removeEvenLength(endset);
-        endset.forEach(System.out::println);
+        RemoveEvenLength newSet = new RemoveEvenLength();
+        for (Object name : newSet.removeEvenLength(beginset)) {
+            System.out.println(name);
+        }
     }
 }

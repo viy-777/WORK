@@ -7,7 +7,6 @@ public class IsUnique {
     public boolean isUnique(Map<String, String> map) {
 
         int count = 0;
-        boolean unique = false;
 
         Set<String> setNames = new HashSet<>();
         for (Map.Entry<String, String> doubleName : map.entrySet()) {
@@ -18,8 +17,7 @@ public class IsUnique {
                 setNames.add(name);
             }
         }
-        unique = (count < 2) || map.isEmpty();
 
-        return unique;
+        return (count < 1) || map.isEmpty();
     }
 }

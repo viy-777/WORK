@@ -6,7 +6,7 @@ import java.util.*;
 
 public class SimpleBasketMap implements Basket {
 
-    Map<String, Integer> basket = new HashMap<>();
+   private Map<String, Integer> basket = new HashMap<>();
 
     @Override
     public void addProduct(String product, int quantity) {
