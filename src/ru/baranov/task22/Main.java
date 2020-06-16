@@ -10,6 +10,7 @@ public class Main {
     public static void main(String[] args) {
         List<Person> persons = new ArrayList<>();
         persons.add(new Person(42, "Иван"));
+        persons.add(new Person(21, "Юлия"));
         persons.add(new Person(18, "Юлия"));
         persons.add(new Person(18, "Олег"));
         persons.add(new Person(19, "Андрей"));
@@ -19,11 +20,8 @@ public class Main {
         System.out.println();
 
         persons.sort(new PersonSuperComparator());
-        System.out.println("Сортировка по возрасту и имени: ");
-        for (Person person : persons) {
+        System.out.println("Сортировка по имени и возрасту: ");
+        for (Person person : persons)
             System.out.println(person);
-        }
-
-
     }
 }
