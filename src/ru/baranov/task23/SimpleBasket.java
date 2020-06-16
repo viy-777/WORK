@@ -38,15 +38,15 @@ public class SimpleBasket implements Basket {
 
     @Override
     public List<String> getProducts() {
-        return listProduct;
+        return new ArrayList<>(listProduct);
     }
 
     public List<Integer> getQuantity() {
-        return listQuantity;
+        return new ArrayList<>(listQuantity);
     }
 
     @Override
     public int getProductQuantity(String product) {
-        return (new ArrayList<>(listQuantity)).get((new ArrayList<String>(listProduct)).indexOf(product));
+        return listQuantity.get(listProduct.indexOf(product));
     }
 }
