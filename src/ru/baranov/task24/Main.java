@@ -26,8 +26,8 @@ public class Main {
         System.out.println();
 
         System.out.println("Слова с нечетной длиной:");
-        RemoveEvenLength newSet = new RemoveEvenLength();
-        for (Object name : newSet.removeEvenLength(beginset)) {
+        Set<String> newSet = new RemoveEvenLength().removeEvenLength(beginset);
+        for (String name : newSet) {
             System.out.println(name);
         }
     }
