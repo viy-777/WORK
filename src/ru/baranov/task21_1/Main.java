@@ -1,7 +1,6 @@
 package ru.baranov.task21_1;
 
 //Дан двумерный массив. Задача – написать метод
-//
 //public void toLeft() {}
 //1.Пройти с 1-ой до последней строки
 //2.Пройти с 1-го до предпоследнего элемента
@@ -12,18 +11,12 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
 
-        System.out.println("Введите кол-во строк двумерного массива:");
-        int numLines = in.nextInt();
-        System.out.println("Введите кол-во столбцов двумерного массива:");
-        int numColumnes = in.nextInt();
+        int[][] initialArray = new int[][]{{1, 2, 3}, {4, 5, 6}};
+        System.out.println("Первоначальный массив:" + Arrays.deepToString(initialArray));
 
-        MyArray.makeArray(numLines, numColumnes);
-
-        System.out.println("Введите кол-во элементов для сдвига массива влево:");
-        int shearSize = in.nextInt();
-        MyArray.toLeft(shearSize);
-
+        MyArray myArray = new MyArray(initialArray);
+        myArray.toLeft();
+        System.out.println("Массив после процедуры сдвига на один элемент:" + Arrays.deepToString(myArray.getMyArray()));
     }
 }
