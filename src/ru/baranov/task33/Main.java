@@ -7,13 +7,10 @@ package ru.baranov.task33;
 
 public class Main {
     public static void main(String[] args) {
-        String initialText = "This is test message";
+        String initialText = "This is test message iii";
         System.out.println("Исходный текст: " + initialText);
 
-        OftenMeetsChar oftenMeetsChar = new OftenMeetsChar(initialText);
-        oftenMeetsChar.FinderOftenMeetsChar();
-        System.out.println("Character: " + oftenMeetsChar.getCharFromtext() +
-                " has occurred maximum times in String: " + oftenMeetsChar.getQuantity());
-
+        OftenMeetsChar oftenMeetsChar = new OftenMeetsChar();
+        oftenMeetsChar.FinderOftenMeetsChar(initialText);
     }
 }
