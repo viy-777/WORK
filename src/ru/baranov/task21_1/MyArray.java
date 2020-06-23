@@ -13,10 +13,10 @@ public class MyArray {
 
     public void toLeft() {
         for (int i = 0; i < myArray.length; i++) {
-            for (int j = 0; j < myArray[0].length - 1; j++) {
+            for (int j = 0; j < myArray[i].length - 1; j++) {
                 myArray[i][j] = myArray[i][j + 1];
             }
-            myArray[i][myArray[0].length - 1] = 0;
+            myArray[i][myArray[i].length - 1] = 0;
         }
     }
 }
